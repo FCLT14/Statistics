@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FC Lahti T14</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="FC Lahti T14 team statistics">
+    <meta name="keywords" content="Statistics, Team">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesnew.css">
+    <link rel="shortcut icon" href="images/FCLBanner.png" type="favicon/ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+    <style>
+        /* STRUCTURE */
+        body {
+            background-color: #ccc;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        body * {
+            box-sizing: border-box;
+            /*Älä laskea paddingiä leveyteen mukaan*/
+        }
+
+        #wrapper {
+            width: 100%;
+            max-width: 960px;
+            background-color: #fff;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+        }
+
+        #mainheader {
+            width: 100%;
+            max-width: 960px;
+            display: grid;
+            grid-template: 1fr 1, 5fr;
+            display: flex;
+            padding: 20px;
+        }
+
+        aside {
+            width: 35%;
+            float: right;
+            padding: 20px;
+        }
+
+        #mainfooter {
+            clear: both;
+            border-top: 2px #000 solid;
+            padding: 20px;
+        }
+
+        .header3 {
+            text-transform: uppercase;
+            font-size: 10px;
+            color: black;
+            grid-template: 1fr;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .item1 {
+            grid-area: left;
+            width: 450px;
+            padding-left: 100px;
+        }
+
+        .item2 {
+            grid-area: right;
+            width: 400px;
+            margin-left: 50px;
+        }
+
+        .grid-container {
+            display: inline-grid;
+            grid-template-areas:
+                'left right';
+            width: 450px;
+        }
+
+        .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .size-36 {
+
+            width: 70px;
+            height: 30px;
+            font-size: 30px;
+        }
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            opacity: 1;
+        }
+
+        
+        /*TYPOGRAPHY*/
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: arial;
+        }
+
+        h1 {
+            color: #8a8a8a;
+            font-size: 30px;
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 90px;
+            font-family: ;
+        }
+
+
+        p {
+            font-family: verdana;
+            font-size: 17px;
+            line-height: 1.5em;
+            text-align: justify;
+        }
+
+        #mainfooter p {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        a {
+            color: #000;
+            text-transform: uppercase;
+            /*crt+e to open the color patterns*/
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #8a8a8a;
+            text-decoration: underline;
+        }
+
+        /*Main navigation*/
+
+        nav {
+            text-transform: uppercase;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        nav ul {}
+
+        nav ul li {
+            list-style-type: none;
+            display: inline-block;
+            background-color: #000;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        nav ul li:hover {
+            background-color: #fff;
+            border-color: 1px solid #000;
+        }
+
+        nav ul li a {}
+
+        nav a {
+            color: #8a8a8a;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        nav a:hover {
+            color: #8a8a8a;
+            border-bottom: 1px solid #000;
+        }
+
+
+        /*MISC*/
+
+        #mainheader img {
+            width: 500px;
+        }
+
+
+        .shadow {
+            box-shadow: 0px 0px 15px #666
+        }
+
+        .rounded {
+            border-radius: 20px;
+        }
+
+        .rotate {
+            transform: rotate(15deg);
+        }
+
+        figcaption {
+            padding-top: 10px;
+            text-align: center;
+            font-family: verdana;
+            font-size: 15px;
+        }
+
+        figure {
+            margin-left: 0px;
+        }
+
+        video {
+            width: 100%;
+        }
+
+
+        /*Fonts*/
+
+
+        @font-face {
+            font-family: Otsikkofontti;
+            src: url(fonts/alex-brush-regular.otf);
+        }
+
+        /*Media Queries*/
+        @media screen and (max-width:600px) {
+            main {
+                width: 100%;
+            }
+
+            aside {
+                width: 100%;
+                float: left;
+            }
+
+            #mainheader {
+                width: 100%;
+            }
+    </style>
+
+<body>
+    <div id="wrapper" class="shadow rounded">
+        <!-- <header id="mainheader">
+            <img src="images/FCLBanner.png" alt="FC Lahti T14" class="rounded">
+            <h1>FC LAHTI T14</h1>
+        </header> -->
+        <header id="header2">
+            <nav>
+                <h2 style="display:none;">Navigaatio</h2>
+                <ul>
+                    <li><a href="indexFCL.html">Koti</a></li>
+                    <li><a href="Statistiikka.html">Statistiikka</a></li>
+                    <!-- <li><a href="Yhteenveto.html">Yhteenveto</a></li> -->
+                </ul>
+            </nav>
+        </header>
+
+<main>
+            
+            <h1>Ottelu Statistiikka</h1>
+
+<form>
+    <fieldset disabled="disabled">
+            <div class="header3">
+                <h2>Päivämäärä
+                    <br>
+                    <input type="date" id="date" value="03-02-2024">
+                </h2>
+                <h2>Valmentaja
+                    <br>
+                    <select name="Valmentaja" id="Valmentaja" value="Mika Riutto">
+                        <option value="Mika Riutto">Mika Riutto</option>
+                        <option value="Seppo Saarinen">Seppo Saarinen</option>
+                        <option value="Mikko Uski">Mikko Uski</option>
+                        <option value="Rauli Parjanne">Rauli Parjanne</option>
+                    </select>
+                </h2>
+
+                <h2>Ottelu
+                    <br>
+                    <input type="text" id="input" value="FC Lahti - HJK City">
+                </h2>
+
+                <h2>Tulos
+                    <br>
+                    <input type="text" id="input" value="0 - 3 (0 - 1)">
+                </h2>
+            </div>
+
+            <div class="grid-container">
+                <div class="item1">
+                    <h2>Hyökkäys</h2>
+                    <!--<div class="item2"> -->
+
+
+
+                    <p>Avaus rakentelu keskeltä</p>
+                    <p>Onnistunut</p>
+
+
+                    <figcaption>1. Puoliaika</figcaption>
+
+
+                    <input type="number" class="size-36" value="3" min="0" step="1">
+
+
+
+                    <!-- <input type="number" id="myNumber">
+
+                    <button onclick="myFunction()">Lisää</button>
+
+                    <script>
+                        function myFunction() {
+                            document.getElementById("myNumber").stepUp();
+                        }
+                    </script> -->
+
+                    <figcaption>2. Puoliaika</figcaption>
+                    <input type="number" class="size-36" value="4" min="0" step="1">
+
+                    <p>Epäonnistunut</p>
+                    <figcaption>1. Puoliaika</figcaption>
+                    <input type="number" class="size-36" value="4" min="0" step="1">
+
+                    <figcaption>2. Puoliaika</figcaption>
+                    <input type="number" class="size-36" value="9" min="0" step="1">
+
+                    <p>Avaus rakentelu laidasta</p>
+
+                    <p>Onnistunut</p>
+                    <figcaption>1. Puoliaika</figcaption>
+                    <input type="number" class="size-36" value="11" min="0" step="1">
+                    <figcaption>2. Puoliaika</figcaption>
+                    <input type="number" class="size-36" value="4" min="0" step="1">
+
+                    <p>Epäonnistunut</p>
+                    <figcaption>1. Puoliaika</figcaption>
+                    <input type="number" class="size-36" value="9" min="0" step="1">
+
+                    <figcaption>2. Puoliaika</figcaption>
+                    <input type="number" class="size-36" value="9" min="0" step="1">
+
+                    <p>Murtautuminen keskeltä</p>
+
+                    <p>Onnistunut</p>
+
+                    <figcaption>1. Puoliaika</figcaption>
+                    <input type="number" class="size-36" value="0" min="0" step="1">
+
+                    <figcaption>2. Puoliaika</figcaption>
+                    <input type="number" class="size-36" value="0" min="0" step="1">
+
+                    <p>Epäonnistunut</p>
+                    <figcaption>1. Puoliaika</figcaption>
+                    <input type="number" class="size-36" value="7" min="0" step="1">
+
+                    <figcaption>2. Puoliaika</figcaption>
+                    <input type="number" class="size-36" value="4" min="0" step="1">
+
+                    <p>Murtautuminen laidasta</p>
+
+                    <p>Onnistunut</p>
+                    <figcaption>1. Puoliaika</figcaption>
+                    <input type="number" class="size-36" value="2" min="0" step="1">
+
+                    <figcaption>2. Puoliaika</figcaption>
+                    <input type="number" class="size-36" value="4" min="0" step="1">
+
+                    <p>Epäonnistunut</p>
+                    <figcaption>1. Puoliaika</figcaption>
+                    <input type="number" class="size-36" value="4" min="0" step="1">
+
+                    <figcaption>2. Puoliaika</figcaption>
+                    <input type="number" class="size-36" value="8" min="0" step="1">
+
+                    <p>Boxiin pääsy</p>
+                    <figcaption>1. Puoliaika</figcaption>
+                    <input type="number" class="size-36" value="2" min="0" step="1">
+
+                    <figcaption>2. Puoliaika</figcaption>
+                    <input type="number" class="size-36" value="0" min="0" step="1">
+
+                    <p>Laukaukset</p>
+
+                    <p>Kohti</p>
+                    <figcaption>1. Puoliaika</figcaption>
+                    <input type="number" class="size-36" value="1" min="0" step="1">
+
+                    <figcaption>2. Puoliaika</figcaption>
+                    <input type="number" class="size-36" value="2" min="0" step="1">
+
+                    <p>Ohi</p>
+                    <figcaption>1. Puoliaika</figcaption>
+                    <input type="number" class="size-36" value="1" min="0" step="1">
+
+                    <figcaption>2. Puoliaika</figcaption>
+                    <input type="number" class="size-36" value="1" min="0" step="1">
+
+                    <p>Kulmat</p>
+
+                    <figcaption>1. Puoliaika</figcaption>
+                    <input type="number" class="size-36" value="1" min="0" step="1">
+
+                    <figcaption>2. Puoliaika</figcaption>
+                    <input type="number" class="size-36" value="1" min="0" step="1">
+
+                </div>
+
+                <div class="grid-container">
+                    <div class="item2">
+                        <h2>Puollustus</h2>
+                        <!-- <div class="item1"> -->
+
+                        <p>Avaus rakentelun estäminen keskeltä</p>
+                        <p>Onnistunut</p>
+
+                        <figcaption>1. Puoliaika</figcaption>
+
+                        <input type="number" class="size-36" value="3" min="0" step="1">
+
+
+                        <figcaption>2. Puoliaika</figcaption>
+                        <input type="number" class="size-36" value="1" min="0" step="1">
+
+                        <p>Epäonnistunut</p>
+                        <figcaption>1. Puoliaika</figcaption>
+                        <input type="number" class="size-36" value="1" min="0" step="1">
+
+                        <figcaption>2. Puoliaika</figcaption>
+                        <input type="number" class="size-36" value="3" min="0" step="1">
+
+                        <p>Avaus rakentelun estäminen laidasta</p>
+
+                        <p>Onnistunut</p>
+                        <figcaption>1. Puoliaika</figcaption>
+                        <input type="number" class="size-36" value="9" min="0" step="1">
+
+                        <figcaption>2. Puoliaika</figcaption>
+                        <input type="number" class="size-36" value="9" min="0" step="1">
+
+                        <p>Epäonnistunut</p>
+                        <figcaption>1. Puoliaika</figcaption>
+                        <input type="number" class="size-36" value="2" min="0" step="1">
+
+                        <figcaption>2. Puoliaika</figcaption>
+                        <input type="number" class="size-36" value="4" min="0" step="1">
+
+                        <p>Murtautumisen estäminen keskeltä</p>
+
+                        <p>Onnistunut</p>
+
+                        <figcaption>1. Puoliaika</figcaption>
+                        <input type="number" class="size-36" value="7" min="0" step="1">
+                        <figcaption>2. Puoliaika</figcaption>
+                        <input type="number" class="size-36" value="8" min="0" step="1">
+
+                        <p>Epäonnistunut</p>
+                        <figcaption>1. Puoliaika</figcaption>
+                        <input type="number" class="size-36" value="1" min="0" step="1">
+
+                        <figcaption>2. Puoliaika</figcaption>
+                        <input type="number" class="size-36" value="2" min="0" step="1">
+
+                        <p>Murtautumisen estäminen laidasta</p>
+
+                        <p>Onnistunut</p>
+                        <figcaption>1. Puoliaika</figcaption>
+                        <input type="number" class="size-36" value="0" min="0" step="1">
+
+                        <figcaption>2. Puoliaika</figcaption>
+                        <input type="number" class="size-36" value="2" min="0" step="1">
+
+
+                        <p>Epäonnistunut</p>
+                        <figcaption>1. Puoliaika</figcaption>
+                        <input type="number" class="size-36" value="0" min="0" step="1">
+
+                        <figcaption>2. Puoliaika</figcaption>
+                        <input type="number" class="size-36" value="1" min="0" step="1">
+
+                        <p>Boxiin pääsy</p>
+                        <figcaption>1. Puoliaika</figcaption>
+                        <input type="number" class="size-36" value="3" min="0" step="1">
+
+                        <figcaption>2. Puoliaika</figcaption>
+                        <input type="number" class="size-36" value="5" min="0" step="1">
+
+                        <p>Laukaukset</p>
+
+                        <p>Kohti</p>
+                        <figcaption>1. Puoliaika</figcaption>
+                        <input type="number" class="size-36" value="3" min="0" step="1">
+
+                        <figcaption>2. Puoliaika</figcaption>
+                        <input type="number" class="size-36" value="4" min="0" step="1">
+
+                        <p>Ohi</p>
+                        <figcaption>1. Puoliaika</figcaption>
+                        <input type="number" class="size-36" value="0" min="0" step="1">
+
+                        <figcaption>2. Puoliaika</figcaption>
+                        <input type="number" class="size-36" value="2" min="0" step="1">
+
+                        <p>Kulmat</p>
+
+                        <figcaption>1. Puoliaika</figcaption>
+                        <input type="number" class="size-36" value="2" min="0" step="1">
+
+                        <figcaption>2. Puoliaika</figcaption>
+                        <input type="number" class="size-36" value="3" min="0" step="1">
+
+                    </div>
+                </div>
+            </div>
+</fieldset>
+</form>
+
+
+        </main>
+    </div>
+</body>
+</head>
+
+</html>

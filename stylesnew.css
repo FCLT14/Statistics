@@ -1,0 +1,65 @@
+/*Header styles*/
+
+
+figcaption {
+    display: flex;
+    justify-content: space-between;
+}        
+
+/*Navikaatio styles*/
+
+
+
+/*Portfolio styles*/
+
+.dashboard-overview {
+    width: 1000px;
+}
+
+.dashboards{
+    width: 1200px;
+    margin-left: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-top: 30px;
+}
+
+.dashboard-image-background {
+    height: 200px;
+    width: 250px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.dashboard {
+    position: relative;
+}
+
+.dashboard img {
+    height: 200px;
+    width: 250px; 
+}
+
+
+.buttons {
+    padding: 10px;
+    margin-left: 5px;
+    gap: 5px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+  
+tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+

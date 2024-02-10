@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FC Lahti T14</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="FC Lahti T14 team statistics">
+    <meta name="keywords" content="Statistics, Team">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesnew.css">
+    <link rel="shortcut icon" href="images/FCLBanner.png" type="favicon/ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <style>
+        /* STRUCTURE */
+        body {
+            background-color: #ccc;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        body * {
+            box-sizing: border-box;
+            /*Älä laskea paddingiä leveyteen mukaan*/
+        }
+
+        #wrapper {
+            width: 100%;
+            max-width: 960px;
+            background-color: #fff;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+        }
+
+        #mainheader {
+            width: 100%;
+            max-width: 960px;
+            display: grid;
+            grid-template: 1fr 1, 5fr;
+            display: flex;
+
+        }
+
+        main {
+            width: 60%;
+            float: left;
+            padding: 20px;
+        }
+
+        aside {
+            width: 35%;
+            float: right;
+            padding: 20px;
+        }
+
+        #mainfooter {
+            color: #000;
+            clear: both;
+            border-top: 2px #000 solid;
+            padding: 20px;
+        }
+        #mainfooter a {
+            color: #000;
+        }
+
+        /*TYPOGRAPHY*/
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: arial;
+        }
+
+        h1 {
+            color: #8a8a8a;
+            font-size: 30px;
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 90px;
+            font-family: ;
+        }
+
+
+        p {
+            font-family: verdana;
+            font-size: 17px;
+            line-height: 1.5em;
+            text-align: justify;
+        }
+
+        #mainfooter p {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        a {
+            color: #ea9797;
+            /*crt+e to open the color patterns*/
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #de2222;
+            text-decoration: underline;
+        }
+
+        /*Main navigation*/
+
+        nav {
+            text-transform: uppercase;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        nav ul {}
+
+        nav ul li {
+            list-style-type: none;
+            display: inline-block;
+            background-color: #000;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        nav ul li:hover {
+            background-color: #fff;
+            border-color: 1px solid #000;
+        }
+
+        nav ul li a {}
+
+        nav a {
+            color: #8a8a8a;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        nav a:hover {
+            color: #8a8a8a;
+            border-bottom: 1px solid #000;
+        }
+
+
+        /*MISC*/
+
+        #mainheader img {
+            width: 900px;
+        }
+
+        #mainarticle1 img {
+            width: 900px;
+            padding-top: 10px;
+            border-radius: 20px;
+        }
+
+        .shadow {
+            box-shadow: 0px 0px 15px #666
+        }
+
+        .rounded {
+            border-radius: 20px;
+        }
+
+        .rotate {
+            transform: rotate(15deg);
+        }
+
+        figcaption {
+            padding-top: 10px;
+            text-align: center;
+            font-family: verdana;
+            font-size: 15px;
+        }
+
+        figure {
+            margin-left: 0px;
+        }
+
+        video {
+            width: 100%;
+        }
+
+
+        /*Fonts*/
+
+
+        @font-face {
+            font-family: Otsikkofontti;
+            src: url(fonts/alex-brush-regular.otf);
+        }
+
+        /*Media Queries*/
+        @media screen and (max-width:600px) {
+            main {
+                width: 100%;
+            }
+
+            aside {
+                width: 100%;
+                float: left;
+            }
+
+            #mainheader {
+                width: 100%;
+            }
+    </style>
+ 
+
+</head>
+
+<body>
+    <div id="wrapper" class="shadow rounded">
+        <header id="mainheader">
+            <img src="images/FCLBanner.png" alt="FC Lahti T14" class="rounded">
+            <!--<h1>FC LAHTI T14</h1> -->
+        </header>
+            <nav>
+                <ul>
+                    <li><a href="indexFCL.html">Koti</a></li>
+                    <li><a href="Statistiikka.html">Statistiikka</a></li>
+                    <!-- <li><a href="Yhteenveto.html">Yhteenveto</a></li> -->
+                </ul>
+            </nav>
+
+
+        <main class="rounded">
+
+            <section id="dasboards" class="blackline">
+                <article id="mainarticle1">
+                    <!-- <h2>Joukkue</h2>
+                    <figure>
+                        <img src="images/FC%20Lahti%20T14.jpg" alt="Joukkue" title="Joukkue" class="shadow rounded">
+                        <figcaption>Joukkue</figcaption>
+                    </figure> -->
+                </article>
+                <!--
+                <article id="mainarticle2">
+                    <h2>Accounts Receivable</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ex, et vel totam placeat accusantium distinctio quibusdam unde sit nobis debitis reiciendis provident exercitationem, libero voluptatibus nam natus doloribus cumque.</p>
+                    <figure>
+                        <img src="images/ARchart.png" alt="Accounts Receivables" title="Accounts Reveivables Overview" class="shadow rounded">
+                        <figcaption>Accounts Receivables Overview</figcaption>
+                    </figure>
+                </article> 
+                <article id="mainarticle3">
+                    <h2>Accounts Paybable</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ex, et vel totam placeat accusantium distinctio quibusdam unde sit nobis debitis reiciendis provident exercitationem, libero voluptatibus nam natus doloribus cumque.</p>
+                    <figure>
+                        <img src="images/APchart.png" alt="Accounts Payables" title="Accounts Payables Overview" class="shadow rounded">
+                        <figcaption>Accounts Payables Overview</figcaption>
+                    </figure>
+
+                </article> 
+                <article id="mainarticle4">
+                    <h2>Cash Flow</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ex, et vel totam placeat accusantium distinctio quibusdam unde sit nobis debitis reiciendis provident exercitationem, libero voluptatibus nam natus doloribus cumque.</p>
+                    <figure>
+                        <img src="images/Cashflowchart.png" alt="Cash Flow" title="Cash Flow Overview" class="shadow rounded">
+                        <figcaption>Cash Flow Overview</figcaption>
+                    </figure>
+
+                </article>
+                <article>
+                    <h2>Something else</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ex, et vel totam placeat accusantium distinctio quibusdam unde sit nobis debitis reiciendis provident exercitationem, libero voluptatibus nam natus doloribus cumque.</p>
+                    <picture>
+                        <source media="(max-width:500px)" srcset="images/flower-yellow.jpg">
+                        <img src="images/flower-red.jpg" alt="Punainen kukka" class="shadow rounded">
+                    </picture>
+                </article>
+                    -->
+            </section>
+            <!--
+            <section id="form" class="blackline">
+                <h2>Contact Form</h2>
+                <p>*are mandatory fields</p>
+                <form action="laheta.php">
+                    <p><label>Name: <input type="text"></label></p>
+                    <p><label>Address: <input type="text" required>*</label></p>
+                    <p><label>Email: <input type="email" required placeholder="name.name@domain.com">*</label></p>
+                    <p><label>Mobile phone: <input type="tel" required>*</label></p>
+                    <p><label>Age: <input type="number"></label></p>
+                    <p><label>Shoe size: <input type="range" min="36" max="46"></label></p>
+                    <p><label>Shoe color: <input type="color"></label></p>
+                    <p><label>Month: <input type="date"></label></p>
+                    <p><input type="submit" value="Send" class="shadow"></p>
+                </form>
+            </section>
+
+            <section id="media">
+                <h2>Musiikki</h2>
+                <audio controls>
+                    <source src="media/song.m4a">
+                    <source src="media/song.mp3">
+                    <source src="media/song.ogg">
+                    <p>Valitettavasti selaimesi ei tue HTML5 audiota</p>
+                </audio>
+
+                <h2>Tutorial Video</h2>
+                <video controls>
+                    <source src="media/video.m4v">
+                    <source src="media/video.ogv">
+                    <source src="media/video.webm">
+                    <p>Valitettavasti selaimesi ei tue HTML5 videota</p>
+                </video>
+            </section> -->
+        </main>
+        <!--
+        <aside class="rounded">
+            <h2>Dictionary & News</h2>
+            <details>
+                <summary>Definitions</summary>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo non, minima eius quisquam ullam consequatur cupiditate voluptatem iusto commodi <strong>expedita ab</strong>, libero soluta quia ratione exercitationem aliquid excepturi eligendi sapiente!</p>
+
+            </details>
+            <details>
+                <summary>News</summary>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo non, minima eius quisquam ullam consequatur cupiditate voluptatem iusto commodi expedita ab, <em>libero soluta quia</em> ratione exercitationem aliquid excepturi eligendi sapiente!</p>
+            </details>
+
+        </aside> -->
+
+        <footer id="mainfooter">
+            <p>Copyright &copy; FC Lahti T14</p>
+            <p>
+                <a href="indexFCL.html">Koti</a>
+                <!--|
+                <a href="services.html">Services</a> |
+                <a href="contact.html">Contact</a> -->
+            </p>
+        </footer>
+
+        <!-- 
+    Lorem - latinaa pätkä
+    ul>li*5>a>p <br> bullet list with a = link and p=paragraph
+    ol>li*5>a>p numbered list with a = link and p=paragraph
+    
+        <!-- <ol>
+        <li><a href="https://google.com"> Google 
+                <p></p>
+            </a></li>
+        <li><a href="">
+                <p></p>
+            </a></li>
+        <li><a href="">
+                <p></p>
+            </a></li>
+        <li><a href="">
+                <p></p>
+            </a></li>
+        <li><a href="">
+                <p></p>
+            </a></li>
+    </ol>
+    <ul>
+        <li><a href="">
+                <p></p>
+            </a></li>
+        <li><a href="">
+                <p></p>
+            </a></li>
+        <li><a href="">
+                <p></p>
+            </a></li>
+        <li><a href="">
+                <p></p>
+            </a></li>
+        <li><a href="">
+                <p></p>
+            </a></li>
+    </ul>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul> -->
+    </div>
+</body>
+
+</html>

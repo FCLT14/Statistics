@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FC Lahti T14</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="FC Lahti T14 team statistics">
+    <meta name="keywords" content="Statistics, Team">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesnew.css">
+    <link rel="shortcut icon" href="images/FCLBanner.png" type="favicon/ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <style>
+        /* STRUCTURE */
+        body {
+            background-color: #ccc;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        body * {
+            box-sizing: border-box;
+            /*Älä laskea paddingiä leveyteen mukaan*/
+        }
+
+        #wrapper {
+            width: 100%;
+            max-width: 960px;
+            background-color: #fff;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+        }
+
+        #mainheader {
+            width: 100%;
+            max-width: 960px;
+            display: grid;
+            grid-template: 1fr 1, 5fr;
+            display: flex;
+            
+        }
+
+        main {
+            width: 60%;
+            float: left;
+            padding: 20px;
+        }
+
+        aside {
+            width: 35%;
+            float: right;
+            padding: 20px;
+        }
+
+        #mainfooter {
+            clear: both;
+            border-top: 2px #000 solid;
+            padding: 20px;
+        }
+
+
+        /*TYPOGRAPHY*/
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: arial;
+        }
+
+        h1 {
+            color: #8a8a8a;
+            font-size: 30px;
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 90px;
+            font-family: ;
+        }
+
+
+        p {
+            font-family: verdana;
+            font-size: 17px;
+            line-height: 1.5em;
+            text-align: justify;
+        }
+
+        #mainfooter p {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        a {
+            color: #000;
+            /*crt+e to open the color patterns*/
+        }
+
+        a:hover {
+            color: #de2222;
+        }
+
+        /*Main navigation*/
+
+        nav {
+            text-transform: uppercase;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        nav ul {}
+
+        nav ul li {
+            list-style-type: none;
+            display: inline-block;
+            background-color: #000;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        nav ul li:hover {
+            background-color: #fff;
+            border-color: 1px solid #000;
+        }
+
+        nav ul li a {}
+
+        nav a {
+            color: #8a8a8a;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        nav a:hover {
+            color: #8a8a8a;
+            border-bottom: 1px solid #000;
+        }
+
+
+        /*MISC*/
+
+        #mainheader img {
+            width: 900px;
+        }
+        
+        #mainarticle1 img{
+            width: 900px;
+            padding-top: 10px;
+            border-radius: 20px;
+        }
+
+             .shadow {
+            box-shadow: 0px 0px 15px #666
+        }
+
+        .rounded {
+            border-radius: 20px;
+        }
+
+        .rotate {
+            transform: rotate(15deg);
+        }
+
+        figcaption {
+            padding-top: 10px;
+            text-align: center;
+            font-family: verdana;
+            font-size: 15px;
+        }
+
+        figure {
+            margin-left: 0px;
+        }
+
+        video {
+            width: 100%;
+        }
+
+
+        /*Fonts*/
+
+
+        @font-face {
+            font-family: Otsikkofontti;
+            src: url(fonts/alex-brush-regular.otf);
+        }
+
+        /*Media Queries*/
+        @media screen and (max-width:600px) {
+            main {
+                width: 100%;
+            }
+
+            aside {
+                width: 100%;
+                float: left;
+            }
+
+            #mainheader {
+                width: 100%;
+            }
+
+    </style>
+    <script>
+        var nimi = "Pasi";
+        console.log(nimi);
+
+    </script>
+
+</head>
+
+<body>
+    <div id="wrapper" class="shadow rounded">
+        <header id="mainheader">
+            <img src="images/FCLBanner.png" alt="FC Lahti T14" class="rounded">
+            <!--<h1>FC LAHTI T14</h1> -->
+        </header>
+            <nav>
+                <ul>
+                    <li><a href="indexFCL.html">Koti</a></li>
+                    <li><a href="Statistiikka.html">Statistiikka</a></li>
+                   <!-- <li><a href="Yhteenveto.html">Yhteenveto</a></li> -->
+                </ul>
+            </nav>
+        </header>
+<h1>Aikaisemmat ottelut</h1>
+<br>
+<table>
+    <tr>
+        <th>Päivämäärä</th>
+        <th>Ottelu</th>
+        <th>Tulos</th>
+    </tr>
+    <tr>
+        <td>03/02/2024</td>
+        <td><a href="ottelu1.html">FC Lahti - HJK City</a></td>
+        <td>0 - 3 (0 - 1)</td>
+    </tr>
+
+
+
+</table>
+
+<footer id="mainfooter">
+            <p>Copyright &copy; FC Lahti T14</p>
+            <p>
+                <a href="indexFCL.html">Koti</a>
+                <!--|
+                <a href="services.html">Services</a> |
+                <a href="contact.html">Contact</a> -->
+            </p>
+        </footer>
+
+<main>
+
+
+</html>
