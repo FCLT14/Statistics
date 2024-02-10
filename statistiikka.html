@@ -38,7 +38,7 @@
             display: grid;
             grid-template: 1fr 1, 5fr;
             display: flex;
-            
+
         }
 
         main {
@@ -96,10 +96,13 @@
         a {
             color: #000;
             /*crt+e to open the color patterns*/
+            text-transform: uppercase;
+
         }
 
         a:hover {
             color: #de2222;
+            text-decoration: underline;
         }
 
         /*Main navigation*/
@@ -108,10 +111,8 @@
             text-transform: uppercase;
             display: flex;
             justify-content: space-between;
-            padding: 10px;
         }
 
-        nav ul {}
 
         nav ul li {
             list-style-type: none;
@@ -123,7 +124,7 @@
 
         nav ul li:hover {
             background-color: #fff;
-            border-color: 1px solid #000;
+            text-decoration: none;
         }
 
         nav ul li a {}
@@ -136,7 +137,6 @@
 
         nav a:hover {
             color: #8a8a8a;
-            border-bottom: 1px solid #000;
         }
 
 
@@ -145,14 +145,14 @@
         #mainheader img {
             width: 900px;
         }
-        
-        #mainarticle1 img{
+
+        #mainarticle1 img {
             width: 900px;
             padding-top: 10px;
             border-radius: 20px;
         }
 
-             .shadow {
+        .shadow {
             box-shadow: 0px 0px 15px #666
         }
 
@@ -202,13 +202,7 @@
             #mainheader {
                 width: 100%;
             }
-
     </style>
-    <script>
-        var nimi = "Pasi";
-        console.log(nimi);
-
-    </script>
 
 </head>
 
@@ -218,33 +212,32 @@
             <img src="images/FCLBanner.png" alt="FC Lahti T14" class="rounded">
             <!--<h1>FC LAHTI T14</h1> -->
         </header>
-            <nav>
+        <nav>
+            <ul>
+                <li><a href="index.html">Koti</a></li>
+                <li><a href="statistiikka.html">Statistiikka</a></li>
+                <!-- <li><a href="yhteenveto.html">Yhteenveto</a></li> -->
+            </ul>
+        </nav>
+
+        <main class="rounded">
+
+            <section id="dasboards" class="blackline">
+
+
+
                 <ul>
-                    <li><a href="index.html">Koti</a></li>
-                    <li><a href="statistiikka.html">Statistiikka</a></li>
-                   <!-- <li><a href="yhteenveto.html">Yhteenveto</a></li> -->
+                    <li>
+                        <a href="uusiottelu.html">Uusi Ottelu</a>
+                    </li>
+                    <li><a href="Aikaisemmatottelut.html">Aikasemmat ottelut</a></li>
                 </ul>
-            </nav>
-        </header>
-<h1>Aikaisemmat ottelut</h1>
-<br>
-<table>
-    <tr>
-        <th>Päivämäärä</th>
-        <th>Ottelu</th>
-        <th>Tulos</th>
-    </tr>
-    <tr>
-        <td>03/02/2024</td>
-        <td><a href="ottelu1.html">FC Lahti - HJK City</a></td>
-        <td>0 - 3 (0 - 1)</td>
-    </tr>
 
 
+        </main>
 
-</table>
 
-<footer id="mainfooter">
+        <footer id="mainfooter">
             <p>Copyright &copy; FC Lahti T14</p>
             <p>
                 <a href="indexFCL.html">Koti</a>
@@ -254,7 +247,8 @@
             </p>
         </footer>
 
-<main>
 
+    </div>
+</body>
 
 </html>
